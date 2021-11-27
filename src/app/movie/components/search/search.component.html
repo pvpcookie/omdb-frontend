@@ -1,1 +1,23 @@
-<p>search works!</p>
+<div class="grid-container">
+
+	<div class="center-center text-center">
+
+		<h1 class="mat-h1 text-light"> 
+			Welcome to another OMDb API interface! <br>
+			<small class="mat-small">Enter you a move title below to begin</small>
+		</h1>
+
+		<mat-card>
+
+			<mat-form-field class="form-transparent full-width" appearance="fill">
+			  	<input placeholder="Movie title" matInput type="text" [(ngModel)]="search">
+			  	<button *ngIf="search.length > 0" mat-icon-button matSuffix>
+					<mat-icon>search</mat-icon>
+			    </button>
+			</mat-form-field>
+
+		</mat-card>
+
+	</div>
+
+</div>

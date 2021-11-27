@@ -1,1 +1,10 @@
-<router-outlet></router-outlet>
+
+<div class="page-container">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="wrap">
+
+    <img *ngFor="let floating_movie of floating_movie_list" class="floating-media"  [src]="floating_movie.media" (click)="viewMovie(floating_movie)" />
+  
+</div>

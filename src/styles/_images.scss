@@ -3,12 +3,5 @@
 	height: 100%;
     width: auto;
 
-    @include respond(tablet) {
-    	display:none !Important;
-    }
-
-    @include respond(mobile) {
-    	display:none !Important;
-    }
 }
 

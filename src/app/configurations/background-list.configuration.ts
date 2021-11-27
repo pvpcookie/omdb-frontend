@@ -1,6 +1,6 @@
-import { FloatingMovieInterface } from 'src/app/interfaces/floating-movie.interface';
+import { FloatingMovie } from 'src/app/interfaces/floating-movie.interface';
 
-const FLOATING_MOVIE_LIST:FloatingMovieInterface[] = [
+const FLOATING_MOVIE_LIST:FloatingMovie[] = [
 	
 	{
 		media:"https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
@@ -25,11 +25,7 @@ const FLOATING_MOVIE_LIST:FloatingMovieInterface[] = [
 	{
 		media:"https://m.media-amazon.com/images/M/MV5BMTkxNDc3OTcxMV5BMl5BanBnXkFtZTgwODk2NjAzOTE@._V1_SX300.jpg",
 		id:''
-	},
-	{
-		media:"https://m.media-amazon.com/images/M/MV5BMTMzMjMwMjcyNl5BMl5BanBnXkFtZTcwNTA1NDgzMQ@@._V1_SX300.jpg",
-		id:''
-	},
+	}
 	
 
 ] 

@@ -5,11 +5,59 @@
     transform: translate(-50%, -50%);
 }
 
+.center-0 {
+    position: relative;
+    top: 50%;
+    display: grid;
+    transform: translate(0, -50%);
+}
+
+.center-x {
+    position: relative;
+    left: 50%;
+    display: grid;
+    transform: translate(-50%, 0);
+}
+
 .full-width{
 	width:100%
 }
 
 .page-container{
+    position:relative;
 	height: 100%;
     width: 100%;
+}
+
+.h-100{
+    height:100% ;   
+}
+
+//Set up margin and padding helpers
+@for $i from 0 through 5 {
+    
+    .my-#{$i} {
+        margin:#{$i}rem 0 !important;
+    }
+
+    .mx-#{$i} {
+        margin:0 #{$i}rem !important;
+    }
+
+    .m-#{$i} {
+        margin:#{$i}rem #{$i}rem !important;
+    }
+
+    .py-#{$i} {
+        padding:#{$i}rem 0 !important;
+    }
+
+    .px-#{$i} {
+        padding:0 #{$i}rem !important;
+    }
+
+    .p-#{$i} {
+        padding:#{$i}rem #{$i}rem !important;
+    }
+
 }

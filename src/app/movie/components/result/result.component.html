@@ -1,0 +1,37 @@
+
+<mat-card (window:resize)="onResize($event)" class="p-0">
+
+  <mat-card-content>
+    <mat-grid-list [cols]="columns">
+
+      <div class="top-button-wrapper">
+        <button mat-fab color="primary" aria-label="back button" (click)="back()">
+            <mat-icon>exit_to_app</mat-icon>
+        </button>
+      </div>
+
+      <mat-grid-tile >
+        <img class="p-0 m-0 image-responsive" [src]="movie.Poster" alt="Photo of a Shiba Inu">
+      </mat-grid-tile>
+
+      <mat-grid-tile [colspan]="(columns > 1) ? 2 : 1">
+        
+        <div class="content-wrapper m-5">
+
+          <h1>{{movie.Title}}</h1><hr>
+          <p>{{movie.Plot}}</p>
+
+          <div class="data-sheet">
+            <div class="data-item" *ngFor="let data_object of movie.data_sheet" style="padding:0.5rem 0.5rem">
+              <strong>{{data_object.key}}:</strong> {{data_object.value}}
+            </div>
+          </div>
+
+        </div>
+
+      </mat-grid-tile>
+
+      </mat-grid-list>
+  </mat-card-content>
+
+</mat-card>

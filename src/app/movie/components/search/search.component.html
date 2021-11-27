@@ -1,23 +1,48 @@
+<app-result (reset)="applyFilters(true)" class="center-0 h-100" *ngIf="movie && !loading" [movie]="movie"></app-result>
+
 <div class="grid-container">
 
-	<div class="center-center text-center">
+	<div *ngIf="!loading && !movie" class="center-center text-center ">
 
 		<h1 class="mat-h1 text-light"> 
 			Welcome to another OMDb API interface! <br>
 			<small class="mat-small">Enter you a move title below to begin</small>
 		</h1>
 
-		<mat-card>
+		<mat-card class="my-1">
 
+			<form (submit)="applyFilters()" action="#">
 			<mat-form-field class="form-transparent full-width" appearance="fill">
-			  	<input placeholder="Movie title" matInput type="text" [(ngModel)]="search">
-			  	<button *ngIf="search.length > 0" mat-icon-button matSuffix>
+			  	<input placeholder="Movie title" matInput type="text" [(ngModel)]="query.t" [ngModelOptions]="{standalone: true}">
+			  	<button type="submit" *ngIf="query.t.length > 0" mat-icon-button matSuffix>
 					<mat-icon>search</mat-icon>
 			    </button>
 			</mat-form-field>
+			</form>
 
+		</mat-card>
+		
+		<h2 *ngIf="has_results" class="mat-h2 text-light"> 
+			Last 5 search results.
+		</h2>
+
+		<mat-card *ngFor="let old_movie of movie_results | async" class="my-1 pointer text-start" (click)="movie = old_movie">
+			{{old_movie.Title}}
 		</mat-card>
 
 	</div>
 
+	<div *ngIf="loading" class="center-center">
+
+		<mat-progress-spinner class="api-loader"
+	        [color]="loader_options.color"
+	        [mode]="loader_options.mode"
+	        [value]="100">
+    	</mat-progress-spinner>
+
+	</div>
+
+	
 </div>
+
+

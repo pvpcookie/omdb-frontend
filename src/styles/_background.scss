@@ -16,14 +16,19 @@ body{
   -moz-osx-font-smoothing: grayscale;
   background-color: $purple;
   font-size: 14px;
-  overflow: hidden;
 }
 
 .wrap{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   perspective-origin: 50% 50%;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
-
-
 
 .floating-media{
   stroke:$green;

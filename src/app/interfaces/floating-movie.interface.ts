@@ -1,4 +1,4 @@
-export interface FloatingMovieInterface{
+export interface FloatingMovie{
 
 	/**
 	 * Media link for visual

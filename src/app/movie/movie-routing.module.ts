@@ -3,14 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { SearchComponent } from 'src/app/movie/components/search/search.component';
 
 const routes: Routes = [
-	{
+
+	  {
     	path: 'search',
     	component: SearchComponent
   	},
+
   	{
     	path: '',
     	redirectTo: 'search'
   	}
+
 ];
 
 @NgModule({

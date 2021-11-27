@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FloatingMovieInterface } from 'src/app/interfaces/floating-movie.interface';
+import { FloatingMovie } from 'src/app/interfaces/floating-movie.interface';
 import { FLOATING_MOVIE_LIST } from 'src/app/configurations/background-list.configuration';
 
 
@@ -18,19 +18,19 @@ export class AppComponent {
 
  /**
   * Floating move list for background
-  * @var {FloatingMovieInterface[]}
+  * @var {FloatingMovie[]}
   */
-  public floating_movie_list: FloatingMovieInterface[] = FLOATING_MOVIE_LIST;
+  public floating_movie_list: FloatingMovie[] = FLOATING_MOVIE_LIST;
 
   constructor() {}
 
  /**
   * View single Movie
-  * @param {FloatingMovieInterface}
+  * @param {FloatingMovie}
   * @todo find feature
   * @return {void}
   */
-  public viewMovie(movie:FloatingMovieInterface):void
+  public viewMovie(movie:FloatingMovie):void
   {
     alert(`movie id: ${movie.id}`)
   }

@@ -6,6 +6,11 @@ const routes: Routes = [
   {
     path: 'movie',
     loadChildren: () => import('src/app/movie/movie.module').then( module => module.MovieModule )
+  },
+  {
+    path: '',
+    redirectTo: 'movie',
+    pathMatch: 'full'
   }
 
 ];

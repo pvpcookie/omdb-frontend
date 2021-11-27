@@ -92,7 +92,7 @@ export class SearchComponent implements OnInit {
    */
   public applyFilters(reset = false)
   {
-    console.log(reset);
+
     if(reset)
     {
 

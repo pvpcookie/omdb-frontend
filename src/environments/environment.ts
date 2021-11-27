@@ -8,7 +8,7 @@ export const environment = {
 
   omdb:{
 
-    key: '82233eeb',
+    key: '',
     key_prefix: 'apikey',
     host: 'http://www.omdbapi.com'
 
